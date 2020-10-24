@@ -1,0 +1,139 @@
+body{
+    margin:30px;
+    text-align: center;
+    background-image: url("/static/images/background.jpg");
+ }
+
+ 
+ h2{
+    font-family: "YuMincho";
+    font-size: 2.8rem;
+ }
+
+span{
+    font-family: "YuMincho";
+    font-size: 2rem;
+ }
+ 
+ .circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;/*背景色*/
+    margin: 10px auto;
+  }
+
+.osechi_image {
+     margin:20px;
+ }
+
+.osechi_question {
+    font-family: "YuMincho";
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.shake {
+    animation: shake 2s infinite;
+}
+@keyframes shake {
+    0% {
+        transform: translate(0px, 2px);
+    }
+    5% {
+        transform: translate(0px, -2px);
+    }
+    10% {
+        transform: translate(0px, 2px);
+    }
+    15% {
+        transform: translate(0px, -2px);
+    }
+    20% {
+        transform: translate(0px, 2px);
+    }
+    25% {
+        transform: translate(0px, -2px);
+    }
+    30% {
+        transform: translate(0px, 0px);
+    }
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-color:#f3f3f3;
+  /* color: #212529; */
+  /* border-radius: 0.5rem; */
+  margin:20px;
+  font-family: "YuMincho"
+}
+
+button.btn-malformation {
+  font-size: 2rem;
+
+  padding: 3rem 4rem;
+
+  color: #f3f3f3;
+  border-radius: 100% 80px / 80px 100%;
+  background-color: #ee7800;
+}
+
+button.btn-malformation:hover {
+  color: #f3f3f3;
+  border-radius: 60% 80% / 100% 80%;
+}
+
+.start_bottun{
+    margin:20px;
+}
+
+/* ここから下がボタンのCSS　*/
+button.btn-push {
+    display: inline-block;
+    max-width: 250px;
+    text-align: left;
+    background-color: #f39800;
+    font-size: 16px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 4px;
+    border-bottom: 4px solid #d37800;
+  }
+  
+button.btn-push:active {
+      transform: translateY(4px);
+      border-bottom: none;
+  }

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<container>
+    {% if osechi %}
+
+    <h2>「はい」か「いいえ」で答えてね</h2>
+    <img class="osechi_image shake" src="/static/images/jyuubako.png" alt="御重" width=200px;>
+    <div class="osechi_question">
+        {{ osechi.question }}
+    </div>
+    <form action="/answer" method="POST">
+        <input type="hidden" name="id" value={{osechi.id}}>
+        <button type="submit" class="btn btn-malformation" name="answer" value="yes">はい</button>
+        <button type="submit" class="btn btn-malformation" name="answer" value="no">いいえ</button>
+    </form>
+    {% else %}
+    <h2>しつもん終了</h2>
+    <form action="/end" method="POST">
+        <input type="hidden" name="id">
+        <button class="btn btn-push" type="submit" value="yes">結果をみる</button>
+    </form>
+
+    {% endif %}
+</container>
+{% endblock %}

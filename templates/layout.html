@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{{ title }}</title>
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+        <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+
+        <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+    </head>
+</head>
+
+<body>
+    {% block content %}
+    <!-- メインコンテンツ -->
+    {% endblock %}
+</body>
+
+</html>
