@@ -1,16 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-
+<h2>あなたにぴったりのおせち料理はこちら！</h2>
 {% if selected_osechi %}
 {% for i in selected_osechi %}
+<span>
+    <img src={{i.image}} alt={{i.name}} width=200px;>
+    <span>{{i.name}}</span>
+</span>
+<!-- <span>クリックすると説明が開くよ</span> -->
 
-<img src={{i.image}} alt={{i.name}} width=200px;>
-<span>{{i.name}}</span>
 <hidden value={{i.wish}};></hidden>
 {% endfor %}
 {% else %}
-<h2>こちらのおせちもどうぞ</h2>
-<a class="btn" href=https://www.kyoto-watanabe.com/osechi>わた奈べのおせちをみる</a>
+<a class="btn" href=https://www.kyoto-watanabe.com/osechi>クリック！</a>
 
 {% endif %}
 
