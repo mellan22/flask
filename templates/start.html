@@ -1,11 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-<h2>たのしくおせちのいわれを学ぼう！</h2>
+<h2>2021年のあなたにぴったりのおせちを選ぶよ</h2>
 <img class="" src="/static/images/shimenawa.png" alt="しめ縄" width=200px;>
+{% if osechi_count == 0 %}
+<div class="start_bottun">
+    <form action="/setting" method="POST">
+        <button class="btn btn-push" type="submit">はじめる!</button>
+    </form>
+</div>
+{% else %}
 <div class="start_bottun">
     <form action="/start_game" method="POST">
         <button class="btn btn-push" type="submit">はじめる</button>
     </form>
 </div>
-
+{% endif %}
 {% endblock %}
